@@ -9,7 +9,7 @@
 
 body{
     text-align: center;
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    background: linear-gradient(to bottom, #6ab7f5, #fff); /* Degradê */
     min-height: 100vh;
 }
 
@@ -30,4 +30,64 @@ main {
     bottom: 50%;
     left: 31%;    
     height: 20%;
+}
+
+.pokemon_data{
+    position:absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 25px); /* Define um tamanho minimo, um padrão desejavel, e um maximo */
+}
+
+.pokemon_name{
+    color: #3a444d;
+    text-transform: capitalize; /* Primeira letra em Maiusculo */
+}
+
+.form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input_search {
+    width: 100%;
+    padding: 4%;
+    outline: none; /*Contorno ao selecionar*/
+    border: 2px solid #333;
+    border-radius: 5px; /*Arredonda as Bordas*/
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333 /*x, y, desfoque, cor*/
+}
+
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex; /*permite que os botoes fiquem um do lado do outro*/
+    gap: 20px; /*distancia entre os botoes*/
+}
+
+.button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+    box-shadow: inset -4px 4px 0 #222; /*sombra no interior para dar sensação de botão pressionado*/
+    font-size: 0.9rem; /*diminuir a fonte ao pressionar*/
 }
