@@ -31,7 +31,7 @@ const renderPokemon = async (pokemon) => {
         pokemonImg.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNum.innerHTML = data.id;
-        pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        pokemonImg.src = data['sprites']['versions']['generation-viii']['icons']['front_default'];
         input.value = '' //Limpa o input após pesquisar
         searchPokemon = data.id
     } else {
@@ -56,7 +56,7 @@ buttonPrev.addEventListener('click', (event) => {
         searchPokemon -= 1
         renderPokemon(searchPokemon)
     } else {
-        searchPokemon = 649
+        searchPokemon = 898
         renderPokemon(searchPokemon)
     }
     
@@ -64,7 +64,7 @@ buttonPrev.addEventListener('click', (event) => {
 
 buttonNext.addEventListener('click', (event) => {
 
-    if (searchPokemon < 649){
+    if (searchPokemon < 898){
         searchPokemon += 1
         renderPokemon(searchPokemon)
     } else {
